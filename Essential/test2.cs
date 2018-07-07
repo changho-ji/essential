@@ -8,5 +8,6 @@ namespace Essential
 {
     class test2
     {
+        // 테스트 입니다.
     }
 }
