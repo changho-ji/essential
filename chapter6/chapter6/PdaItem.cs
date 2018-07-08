@@ -8,7 +8,7 @@ namespace chapter6
 {
     public class PdaItem
     {
-        public string Name { get; set; }
+        public virtual string Name { get; set; }
 
         public DateTime LastUpdated { get; set; }
 

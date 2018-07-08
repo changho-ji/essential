@@ -30,5 +30,38 @@ namespace chapter6
                 contact.ObjectKey = Guid.Empty;
             }
         }
+
+        /*
+        private Person InternalPerson { get; set; }
+
+        public string FirstName
+        {
+            get { return InternalPerson.FirstName; }
+            set { InternalPerson.FirstName = value; }
+        }
+
+        public string LastName
+        {
+            get { return InternalPerson.LastName; }
+            set { InternalPerson.LastName = value; }
+        }
+        */
+
+        public override string Name
+        {
+            get
+            {
+                return $"{FirstName} {LastName}";
+            }
+            set
+            {
+                string[] names = value.Split(' ');
+                FirstName = names[0];
+                LastName = names[1];
+            }
+        }
+
+        public string FirstName { get; set; }
+        public string LastName { get; set; }
     }
 }
