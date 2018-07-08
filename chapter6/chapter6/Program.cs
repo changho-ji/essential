@@ -8,8 +8,51 @@ namespace chapter6
 {
     class Program
     {
+        public class BaseClass
+        {
+            public void DisplayName()
+            {
+                Console.WriteLine("BaseClass");
+            }
+        }
+
+        public class DerivedClass : BaseClass
+        {
+            public virtual void DisplayName()
+            {
+                Console.WriteLine("DerivedClass");
+            }
+        }
+
+        public class SubDerivedClass : DerivedClass
+        {
+            public override void DisplayName()
+            {
+                Console.WriteLine("SubDerivedClass");
+            }
+        }
+
+        public class SuperSubDerivedClass : SubDerivedClass
+        {
+            public new void DisplayName()
+            {
+                Console.WriteLine("SuperSubDerivedClass");
+            }
+        }
+
         public static void Main(string[] args)
         {
+            SuperSubDerivedClass superSubDerivedClass = new SuperSubDerivedClass();
+
+            SubDerivedClass subDerivedClass = superSubDerivedClass;
+            DerivedClass derivedClass = superSubDerivedClass;
+            BaseClass baseClass = superSubDerivedClass;
+
+            superSubDerivedClass.DisplayName();
+            subDerivedClass.DisplayName();
+            derivedClass.DisplayName();
+            baseClass.DisplayName();
+
             //Contact contact = new Contact();
             //contact.Name = "Inigo Montoya";
 
@@ -18,6 +61,7 @@ namespace chapter6
             // 보호 수준으로 인해 액세스하지 못함
             // contact.ObjectKey = Guid.NewGuid();
 
+            /*
             Contact contact;
             PdaItem item;
 
@@ -27,6 +71,7 @@ namespace chapter6
             item.Name = "Inigo Montoya";
 
             Console.WriteLine($"{contact.FirstName} {contact.LastName}");
+            */
         }
     }
 }

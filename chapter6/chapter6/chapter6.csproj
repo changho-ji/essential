@@ -43,6 +43,7 @@
   </ItemGroup>
   <ItemGroup>
     <Compile Include="Contact.cs" />
+    <Compile Include="Controller.cs" />
     <Compile Include="PdaItem.cs" />
     <Compile Include="Person.cs" />
     <Compile Include="Program.cs" />
