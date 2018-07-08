@@ -8,8 +8,16 @@ namespace chapter6
 {
     class Program
     {
-        static void Main(string[] args)
+        public static void Main(string[] args)
         {
+            Contact contact = new Contact();
+            contact.Name = "Inigo Montoya";
+
+            // System.Console.WriteLine(contact.Name);
+
+            // 보호 수준으로 인해 액세스하지 못함
+            // contact.ObjectKey = Guid.NewGuid();
+
         }
     }
 }
