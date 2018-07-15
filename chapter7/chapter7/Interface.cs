@@ -6,7 +6,11 @@ using System.Threading.Tasks;
 
 namespace chapter7
 {
-    interface Interface1
+    interface IListable
     {
+        string[] ColumnValues
+        {
+            get;
+        }
     }
 }
