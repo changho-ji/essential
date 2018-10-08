@@ -13,7 +13,7 @@ namespace Calc
             MainMenu();
         }
 
-        // 메인메뉴
+        // 메인메뉴 
         static void MainMenu()
         {
             Console.Clear();
@@ -98,6 +98,32 @@ namespace Calc
 
                 listExpr.Add(inputVal);
             }
+
+            /*
+            Console.Clear();
+            Console.WriteLine("계산기");
+            ConsoleKeyInfo x = new ConsoleKeyInfo();
+            while (x.KeyChar != '=')
+            {
+                switch (x.KeyChar)
+                {
+                    case '*':                        
+                        break;
+                    case '/':                        
+                        break;
+                    case '+':
+                        break;
+                    case '-':
+                        break;
+                    default:                        
+                        break;
+                }
+
+                x = Console.ReadKey();
+            }
+            Console.WriteLine("\n\nYou have pressed '=' ");
+            Console.Read();
+            */
 
             // 계산 결과
             Console.Clear();
