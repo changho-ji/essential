@@ -6,7 +6,7 @@ using System.Threading.Tasks;
 
 namespace Calc
 {
-    // 계산 클래스
+    // 계산 클래스.
     class Calculate
     {
         public Calculate(List<string> listExpr)

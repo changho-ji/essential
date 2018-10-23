@@ -13,7 +13,7 @@ namespace Calc
             MainMenu();
         }
 
-        // 메인메뉴..
+        // 메인 메뉴.
         static void MainMenu()
         {
             Console.Clear();
